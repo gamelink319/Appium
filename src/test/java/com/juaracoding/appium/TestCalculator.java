@@ -38,15 +38,45 @@ public class TestCalculator {
 		calculator = new Calculator(driver);
 	}
 
-	@Test
+	@Test(priority = 1)
 	public void testAdd() {
+		System.out.println("Test Pertambahan");
 		calculator.calcAdd();
 		System.out.println("Hasil = " + calculator.getTxtResult());
+		assertEquals(calculator.getTxtResult(), "7");
+		calculator.Clear();
+	}
+
+	@Test(priority = 2)
+	public void testMinus() {
+		System.out.println("Test Pengurangan");
+		calculator.calcMinus();
+		System.out.println("Hasil = " + calculator.getTxtResult());
+		assertEquals(calculator.getTxtResult(), "25");
+		calculator.Clear();
+	}
+
+	@Test(priority = 3)
+	public void testMultiple() {
+		System.out.println("Test Perkalian");
+		calculator.calcMultiple();
+		System.out.println("Hasil = " + calculator.getTxtResult());
+		assertEquals(calculator.getTxtResult(), "45");
+		calculator.Clear();
+	}
+
+	@Test(priority = 4)
+	public void testDevide() {
+		System.out.println("Test Pembagian");
+		calculator.calcDevided();
+		System.out.println("Hasil = " + calculator.getTxtResult());
 		assertEquals(calculator.getTxtResult(), "3");
+		calculator.Clear();
 	}
 
 	@AfterClass
 	public void CloseApp() {
 		driver.quit();
 	}
+
 }
