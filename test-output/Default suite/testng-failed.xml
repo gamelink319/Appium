@@ -5,10 +5,11 @@
     <classes>
       <class name="com.juaracoding.appium.TestCalculator">
         <methods>
-          <include name="testAdd"/>
           <include name="SetUP"/>
+          <include name="Clear"/>
           <include name="pageObject"/>
           <include name="CloseApp"/>
+          <include name="testMinus"/>
         </methods>
       </class> <!-- com.juaracoding.appium.TestCalculator -->
     </classes>
